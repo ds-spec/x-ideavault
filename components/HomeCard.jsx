@@ -55,39 +55,46 @@ export default function HomeCard() {
 
   return (
     <div className="flex flex-col justify-start gap-4 w-full rounded-xl">
-      {cards?.map((card) => (
-        <div
-          key={card.id}
-          className="flex flex-col gap-3 items-start rounded-2xl bg-[#0E1627] border-[0.5px] border-[#2D2D36] px-4 py-5 min-h-36 hover:border-[#064793] hover:shadow-xl hover:shadow-blue-500/20 transition-all"
-        >
-          <div className="flex items-center gap-2">
-            <div
-              style={{ background: getRandomColor() }}
-              className="w-9 h-9 rounded-full border-[0.5px] border-[#064793]"
-            ></div>
-            <div className="flex flex-col">
-              <h3 className="font-medium">{card.author}</h3>
-              <h3 className="font-light text-[0.8vw] text-gray-400">
-                {card.handle}
-              </h3>
-            </div>
-          </div>
-          <div className="flex flex-col justify-center">
-            <h3 className="text-md text-gray-200 mb-2">{card.title}</h3>
+      {cards?.map((card, index) => {
+        const isLastTwo = index >= cards.length - 2;
+        return (
+          <div
+            key={card.id}
+            className={`flex flex-col gap-3 items-start rounded-2xl bg-[#0E1627] border-[0.5px] border-[#2D2D36] px-4 py-5 min-h-36  ${
+              isLastTwo
+                ? "blur-sm"
+                : "hover:border-[#064793] hover:shadow-xl hover:shadow-blue-500/20 transition-all"
+            }`}
+          >
             <div className="flex items-center gap-2">
-              <Tag className="mt-2" size={18} color="#94A3B8" />
-              {card?.tags.map((tag, index) => (
-                <div
-                  key={index}
-                  className="bg-[#212327] w-fit px-3 py-1 rounded-full mt-2"
-                >
-                  <p className="text-sm">{tag}</p>
-                </div>
-              ))}
+              <div
+                style={{ background: getRandomColor() }}
+                className="w-9 h-9 rounded-full border-[0.5px] border-[#064793]"
+              ></div>
+              <div className="flex flex-col">
+                <h3 className="font-medium">{card.author}</h3>
+                <h3 className="font-light text-[0.8vw] text-gray-400">
+                  {card.handle}
+                </h3>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center">
+              <h3 className="text-md text-gray-200 mb-2">{card.title}</h3>
+              <div className="flex items-center gap-2">
+                <Tag className="mt-3" size={15} color="#94A3B8" />
+                {card?.tags.map((tag, index) => (
+                  <div
+                    key={index}
+                    className="bg-[#212327] w-fit px-3 py-1 rounded-full mt-2"
+                  >
+                    <p className="text-sm">{tag}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

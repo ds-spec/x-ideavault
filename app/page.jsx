@@ -3,12 +3,12 @@ import { ArrowRight, Lightbulb, Sparkles } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen bg-gradient-to-br from-[#0A0A23] via-[#12121C] to-[#1A1A2E] px-10 py-7">
+    <div className="w-full min-h-screen bg-gradient-to-br from-[#0A0A23] via-[#12121C] to-[#1A1A2E] px-10 py-7">
       <div className="flex items-center gap-2">
         <Lightbulb size={25} color="#0265D3" />
         <h1 className="text-xl font-bold">X-IdeaVault</h1>
       </div>
-      <div className="flex items-center justify-evenly h-full">
+      <div className="flex items-center justify-evenly h-full mt-24">
         <div className="w-[40%] flex flex-col items-start gap-8">
           <h2 className="font-bold text-6xl w-[94%]  leading-tight">
             Turn <span className="text-[#23A4FA]">X</span> inspiration into
@@ -39,6 +39,15 @@ export default function Home() {
         <div className="w-[50%] flex items-center justify-center">
           <HomeCard />
         </div>
+      </div>
+      <div className="flex flex-col mt-40 gap-4 text-center">
+        <h1 className="text-[2.5vw] font-bold">
+          Everything You Need to Curate Brilliance
+        </h1>
+        <h3 className="text-xl">
+          X-IdeaVault is designed to be simple, powerful, and your private
+          sanctuary for inspiration.
+        </h3>
       </div>
     </div>
   );
