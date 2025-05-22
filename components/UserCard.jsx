@@ -1,6 +1,6 @@
 import { Tag } from "lucide-react";
 
-export default function HomeCard() {
+export default function UserCard() {
   const cards = [
     {
       id: 1,
