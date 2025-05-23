@@ -1,8 +1,9 @@
 import FeatureCard from "@/components/FeatureCard";
+import IdeaFlow from "@/components/IdeaFlow";
 import UserCard from "@/components/UserCard";
 import { ArrowRight, Lightbulb, Sparkles } from "lucide-react";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <>
       <div className="w-full min-h-screen bg-[#090E21] px-10 py-7">
@@ -42,7 +43,7 @@ export default function Home() {
             <UserCard />
           </div>
         </div>
-        <div className="flex flex-col mt-40 gap-2 items-center">
+        <div className="flex flex-col mt-40 gap-2 items-center mb-20">
           <h1 className="text-[2.5vw] font-bold">
             Everything You Need to Curate Brilliance
           </h1>
@@ -53,14 +54,16 @@ export default function Home() {
           <FeatureCard />
         </div>
       </div>
-      <div className="flex flex-col gap-2 items-center bg-[#0B1224]">
+      <div className="w-full h-[80vh] flex flex-col gap-2 px-10 py-20 items-center bg-[#0B1224]">
         <h1 className="text-[2.5vw] font-bold">
           Simple Steps to Your Idea Sanctuary
         </h1>
-        <h3 className="text-lg text-[#94A3B8] w-[40%] text-center">
+        <h3 className="text-lg text-[#94A3B8] w-[35%] text-center">
           Start capturing and cultivating your best ideas in just a few moments.
         </h3>
+        <IdeaFlow />
       </div>
     </>
   );
-}
+};
+export default Home;

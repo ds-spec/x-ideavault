@@ -1,7 +1,16 @@
 import { Bookmark, ShieldCheck, Tags, Zap } from "lucide-react";
+import React, { ReactElement } from "react";
 
-export default function FeatureCard() {
-  const features = [
+interface Feature {
+  id: number;
+  title: string;
+  icon: ReactElement;
+  description: string;
+  comingSoon?: boolean;
+}
+
+const FeatureCard: React.FC = () => {
+  const features: Feature[] = [
     {
       id: 1,
       title: "Save Instantly",
@@ -37,7 +46,10 @@ export default function FeatureCard() {
     <>
       <div className="flex items-center justify-between w-full mt-12">
         {features?.map((feature) => (
-          <div className="flex w-80 border-[0.5px] border-[#2D2D36] shadow-xl drop-shadow-black rounded-xl px-5 py-7 bg-[#0F1628] hover:border-[#064793] transition-all">
+          <div
+            key={feature.id}
+            className="flex w-80 border-[0.5px] border-[#2D2D36] shadow-xl drop-shadow-black rounded-xl px-5 py-7 bg-[#0F1628] hover:border-[#064793] transition-all"
+          >
             <div className="flex flex-col gap-4">
               <div className="bg-[#0D203D] rounded-md p-3 w-fit">
                 {feature.icon}
@@ -50,4 +62,5 @@ export default function FeatureCard() {
       </div>
     </>
   );
-}
+};
+export default FeatureCard;

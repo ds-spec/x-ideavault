@@ -1,7 +1,18 @@
 import { Tag } from "lucide-react";
 
-export default function UserCard() {
-  const cards = [
+interface User {
+  id: number;
+  title: string;
+  author: string;
+  url: string;
+  tags: string[];
+  savedAt: string;
+  aiSuggestion: string;
+  handle: string;
+}
+
+const UserCard: React.FC = () => {
+  const cards: User[] = [
     {
       id: 1,
       title:
@@ -37,7 +48,7 @@ export default function UserCard() {
     },
   ];
 
-  const getRandomColor = () => {
+  const getRandomColor = (): string => {
     const r1 = Math.floor(Math.random() * 255);
     const g1 = Math.floor(Math.random() * 255);
     const b1 = Math.floor(Math.random() * 255);
@@ -97,4 +108,6 @@ export default function UserCard() {
       })}
     </div>
   );
-}
+};
+
+export default UserCard;
