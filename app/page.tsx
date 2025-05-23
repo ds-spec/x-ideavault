@@ -68,7 +68,7 @@ const Home = (): JSX.Element => {
 
   const IdeaSection = (): JSX.Element => {
     return (
-      <section className="w-full h-[80vh] flex flex-col gap-2 px-10 py-20 items-center bg-[#0B1224]">
+      <section className="w-full h-full flex flex-col gap-2 px-10 py-20 items-center bg-[#0B1224]">
         <h1 className="text-[2.5vw] font-bold">
           Simple Steps to Your Idea Sanctuary
         </h1>

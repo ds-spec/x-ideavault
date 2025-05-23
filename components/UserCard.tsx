@@ -1,4 +1,5 @@
 import { Tag } from "lucide-react";
+import { JSX } from "react";
 
 interface User {
   id: number;
@@ -11,7 +12,7 @@ interface User {
   handle: string;
 }
 
-const UserCard: React.FC = () => {
+const UserCard = (): JSX.Element => {
   const cards: User[] = [
     {
       id: 1,
@@ -71,7 +72,7 @@ const UserCard: React.FC = () => {
         return (
           <div
             key={card.id}
-            className={`flex flex-col gap-3 items-start rounded-2xl bg-[#0E1627] border-[0.5px] border-[#2D2D36] px-4 py-5 min-h-36  ${
+            className={`flex flex-col gap-3 items-start rounded-2xl bg-[#0E1627] border-[0.5px] border-[#2D2D36] px-4 py-5 min-h-36 ${
               isLastTwo
                 ? "blur-sm"
                 : "hover:border-[#064793] hover:shadow-xl hover:shadow-blue-500/20 transition-all"

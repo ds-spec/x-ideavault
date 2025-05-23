@@ -1,5 +1,5 @@
 import { Bookmark, ShieldCheck, Tags, Zap } from "lucide-react";
-import React, { ReactElement } from "react";
+import React, { JSX, ReactElement } from "react";
 
 interface Feature {
   id: number;
@@ -9,7 +9,7 @@ interface Feature {
   comingSoon?: boolean;
 }
 
-const FeatureCard: React.FC = () => {
+const FeatureCard = (): JSX.Element => {
   const features: Feature[] = [
     {
       id: 1,
