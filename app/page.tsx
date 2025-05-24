@@ -44,11 +44,11 @@ const Home = (): JSX.Element => {
 
   const FeaturesSection = (): JSX.Element => {
     return (
-      <section className="flex flex-col mt-40 gap-2 items-center mb-20">
-        <h1 className="text-[2.5vw] font-bold">
+      <section className="flex flex-col mt-32 gap-2 items-center mb-20">
+        <h1 className="text-3xl md:text-[2.5vw] text-center font-bold">
           Everything You Need to Curate Brilliance
         </h1>
-        <h3 className="text-lg text-[#94A3B8] max-w-2xl text-center">
+        <h3 className="text-md md:text-lg text-[#94A3B8] max-w-2xl text-center">
           X-IdeaVault is designed to be simple, powerful, and your private
           sanctuary for inspiration.
         </h3>

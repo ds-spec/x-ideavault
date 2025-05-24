@@ -44,7 +44,7 @@ const FeatureCard = (): JSX.Element => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center gap-7 justify-between w-full mt-12">
+      <div className="flex flex-col md:flex-row items-center gap-7 justify-between w-full h-full mt-12">
         {features?.map((feature) => (
           <div
             key={feature.id}
