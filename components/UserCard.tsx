@@ -85,7 +85,7 @@ const UserCard = (): JSX.Element => {
               ></div>
               <div className="flex flex-col">
                 <h3 className="font-medium">{card.author}</h3>
-                <h3 className="font-light text-[0.8vw] text-gray-400">
+                <h3 className="font-light text-sm md:text-[0.8vw] text-gray-400">
                   {card.handle}
                 </h3>
               </div>

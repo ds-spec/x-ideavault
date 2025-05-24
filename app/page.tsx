@@ -17,13 +17,13 @@ const Home = (): JSX.Element => {
 
   const UserSection = (): JSX.Element => {
     return (
-      <section className="flex items-center justify-evenly h-full mt-24">
+      <section className="flex flex-col md:flex-row gap-16 items-center justify-evenly h-full mt-24">
         <article className="flex flex-1 max-w-xl flex-col items-start gap-8">
           <h2 className="font-bold text-6xl max-w-xl leading-tight">
             Turn <span className="text-[#23A4FA]">X</span> inspiration into
             action
           </h2>
-          <p className=" text-xl max-w-md text-gray-300 font-normal">
+          <p className="text-lg md:text-xl max-w-md text-gray-300 font-normal">
             Got an idea sparked by a tweet? Save it in your private X-IdeaVault
             and never let brilliance slip away.
           </p>
@@ -60,10 +60,10 @@ const Home = (): JSX.Element => {
   const IdeaSection = (): JSX.Element => {
     return (
       <section className="w-full h-full flex flex-col gap-2 px-10 py-20 items-center bg-[#0B1224]">
-        <h1 className="text-[2.5vw] font-bold">
+        <h1 className="text-3xl text-center md:text-[2.5vw] font-bold">
           Simple Steps to Your Idea Sanctuary
         </h1>
-        <h3 className="text-lg text-[#94A3B8] max-w-xl text-center">
+        <h3 className="text-md md:text-lg text-[#94A3B8] max-w-xl text-center">
           Start capturing and cultivating your best ideas in just a few moments.
         </h3>
         <IdeaFlow />
