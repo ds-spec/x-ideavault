@@ -34,12 +34,12 @@ const IdeaFlow = (): JSX.Element => {
   ];
 
   return (
-    <div className="grid grid-cols-3 grid-rows-2 w-full h-screen px-5 gap-4">
+    <div className="grid grid-cols-3 grid-rows-2 w-full min-h-screen px-5 gap-4">
       <div className="w-full h-full flex flex-col gap-5 items-center justify-center  text-white">
         <div className="flex items-center justify-center bg-[#0A1B3A] rounded-full p-4">
           <Eye color="#007AFF" size={35} />
         </div>
-        <h1 className="font-bold text-xl">1. Spot an Idea</h1>
+        <h1 className="font-bold text-2xl">1. Spot an Idea</h1>
         <p className="text-sm text-center max-w-sm text-[#94A3B8]">
           Browse Twitter/X and find a tweet that sparks inspiration or a new
           project idea.
@@ -52,7 +52,7 @@ const IdeaFlow = (): JSX.Element => {
         <div className="flex items-center justify-center bg-[#0A1B3A] rounded-full p-4">
           <Eye color="#007AFF" size={35} />
         </div>
-        <h1 className="font-bold text-xl">2. Save to Vault</h1>
+        <h1 className="font-bold text-2xl">2. Save to Vault</h1>
         <p className="text-sm text-center max-w-sm text-[#94A3B8] ">
           Quickly save the tweet to your private X-IdeaVault with relevant tags
           and notes.
@@ -65,7 +65,7 @@ const IdeaFlow = (): JSX.Element => {
         <div className="flex items-center justify-center bg-[#0A1B3A] rounded-full p-4">
           <Eye color="#007AFF" size={35} />
         </div>
-        <h1 className="font-bold text-xl">3. Revisit & Build</h1>
+        <h1 className="font-bold text-2xl">3. Revisit & Build</h1>
         <p className="text-sm text-center max-w-sm text-[#94A3B8]">
           Access your organized ideas anytime, develop them further, and turn
           inspiration into reality.

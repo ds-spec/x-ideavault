@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import FeatureCard from "@/components/FeatureCard";
 import IdeaFlow from "@/components/IdeaFlow";
 import UserCard from "@/components/UserCard";
@@ -26,17 +27,7 @@ const Home = (): JSX.Element => {
             Got an idea sparked by a tweet? Save it in your private X-IdeaVault
             and never let brilliance slip away.
           </p>
-          <button className="group px-8 py-3 rounded-xl bg-[#007AFF] shadow-md shadow-blue-500/30 hover:shadow-lg hover:bg-[#0170EA] hover:scale-105 cursor-pointer transition-all duration-300">
-            <div className="flex items-center gap-2">
-              <p className="font-bold text-lg">
-                Get Started - Save your first idea
-              </p>
-              <ArrowRight
-                size={18}
-                className="group-hover:translate-x-2 transition-transform duration-300"
-              />
-            </div>
-          </button>
+          <Button text="Get Started - Save your first idea" />
           <div className="flex items-center gap-2">
             <Sparkles size={18} color="#B5E3F5" />
             <p className="text-[#8D9CB1] text-sm">
@@ -80,6 +71,27 @@ const Home = (): JSX.Element => {
     );
   };
 
+  const FooterSection = (): JSX.Element => {
+    return (
+      <section className="relative w-full h-full flex flex-col px-5 py-20 justify-between items-center bg-[#090E21] ">
+        <div className="flex flex-col gap-7 items-center justify-center">
+          <Sparkles size={55} color="#B5E3F5" />
+          <h1 className="text-5xl font-extrabold text-center">
+            Ready to Capture Your Next Big Idea?
+          </h1>
+          <article className="max-w-xl text-xl text-center">
+            Join X-IdeaVault today and start building your personal library of
+            inspiration. It&apos;s free to get started!
+          </article>
+          <Button text="Save your first idea now" />
+        </div>
+        <p className="absolute bottom-1 text-gray-400 text-sm">
+          © 2025 X-IdeaVault. Built with 💙 by Deep
+        </p>
+      </section>
+    );
+  };
+
   return (
     <main>
       <div className="w-full min-h-screen bg-[#090E21] px-10 py-7">
@@ -88,6 +100,7 @@ const Home = (): JSX.Element => {
         <FeaturesSection />
       </div>
       <IdeaSection />
+      <FooterSection />
     </main>
   );
 };
