@@ -61,7 +61,7 @@ const IdeaFlow = (): JSX.Element => {
       <div className="flex items-center justify-center text-white">
         <ChevronRight size={35} color="#007AFF" />
       </div>
-      <div className="w-full h-full flex flex-col gap-5 items-center justify-center  text-white">
+      <div className="w-full h-full flex flex-col gap-5 items-center justify-center text-white">
         <div className="flex items-center justify-center bg-[#0A1B3A] rounded-full p-4">
           <Eye color="#007AFF" size={35} />
         </div>

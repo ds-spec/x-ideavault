@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import FeatureCard from "@/components/FeatureCard";
 import IdeaFlow from "@/components/IdeaFlow";
 import UserCard from "@/components/UserCard";
-import { ArrowRight, Lightbulb, Sparkles } from "lucide-react";
+import { Lightbulb, Sparkles } from "lucide-react";
 import { JSX } from "react";
 
 const Home = (): JSX.Element => {
@@ -73,19 +73,19 @@ const Home = (): JSX.Element => {
 
   const FooterSection = (): JSX.Element => {
     return (
-      <section className="relative w-full h-full flex flex-col px-5 py-20 justify-between items-center bg-[#090E21] ">
+      <section className="relative w-full min-h-[70vh] flex flex-col px-5 py-20 justify-between items-center bg-[#090E21] ">
         <div className="flex flex-col gap-7 items-center justify-center">
           <Sparkles size={55} color="#B5E3F5" />
-          <h1 className="text-5xl font-extrabold text-center">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-center">
             Ready to Capture Your Next Big Idea?
           </h1>
-          <article className="max-w-xl text-xl text-center">
+          <article className="max-w-xl text-md md:text-xl text-center">
             Join X-IdeaVault today and start building your personal library of
             inspiration. It&apos;s free to get started!
           </article>
           <Button text="Save your first idea now" />
         </div>
-        <p className="absolute bottom-1 text-gray-400 text-sm">
+        <p className="absolute bottom-8 text-gray-400 text-sm">
           © 2025 X-IdeaVault. Built with 💙 by Deep
         </p>
       </section>
@@ -94,7 +94,7 @@ const Home = (): JSX.Element => {
 
   return (
     <main>
-      <div className="w-full min-h-screen bg-[#090E21] px-10 py-7">
+      <div className="w-full min-h-screen bg-[#090E21] px-10 py-7 overflow-hidden">
         <Heading />
         <UserSection />
         <FeaturesSection />

@@ -1,5 +1,5 @@
 import { Bookmark, ShieldCheck, Tags, Zap } from "lucide-react";
-import React, { JSX, ReactElement } from "react";
+import { JSX, ReactElement } from "react";
 
 interface Feature {
   id: number;
@@ -44,7 +44,7 @@ const FeatureCard = (): JSX.Element => {
 
   return (
     <>
-      <div className="flex items-center justify-between w-full mt-12">
+      <div className="flex flex-col md:flex-row items-center gap-7 justify-between w-full mt-12">
         {features?.map((feature) => (
           <div
             key={feature.id}
