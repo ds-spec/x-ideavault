@@ -10,7 +10,7 @@ const Home = (): JSX.Element => {
     return (
       <section className="flex items-center gap-2">
         <Lightbulb size={25} color="#0265D3" />
-        <h1 className="text-xl font-bold">X-IdeaVault</h1>
+        <h1 className="text-xl font-bold">IdeaSnap</h1>
       </section>
     );
   };

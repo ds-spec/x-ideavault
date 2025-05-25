@@ -1,4 +1,7 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { JSX } from "react";
 
 type ButtonProps = {
@@ -6,8 +9,15 @@ type ButtonProps = {
 };
 
 const Button = ({ text }: ButtonProps): JSX.Element => {
+  const router = useRouter();
+  const handleRedirect = (): void => {
+    router.push("/sign-in");
+  };
   return (
-    <button className="group px-8 py-3 rounded-xl bg-[#007AFF] shadow-md shadow-blue-500/40 hover:shadow-xl hover:bg-[#0170EA] hover:scale-105 active:scale-105 active:bg-[#0170EA] focus:shadow-xl focus:bg-[#0170EA] focus:scale-105 cursor-pointer transition-all duration-300">
+    <button
+      onClick={handleRedirect}
+      className="group px-8 py-3 rounded-xl bg-[#007AFF] shadow-md shadow-blue-500/40 hover:shadow-xl hover:bg-[#0170EA] hover:scale-105 active:scale-105 active:bg-[#0170EA] focus:shadow-xl focus:bg-[#0170EA] focus:scale-105 cursor-pointer transition-all duration-300"
+    >
       <div className="flex items-center gap-2">
         <p className="font-bold text-sm md:text-xl">{text}</p>
         <ArrowRight
